@@ -68,13 +68,17 @@ Generate scene mesh reconstruction results with the following script:
 ```
 python demo.py ---config configs/config_files/final_recon.yaml
 ```
-Specify the scenes to generate in by modifying *vis_scan_names* in [final_recon.yaml](configs/config_files/final_recon.yaml). If you want to generate the results for all scenes in the test dataset, set vis_scan_names to all.
+Specify the scenes to generate by modifying *vis_scan_names* in [final_recon.yaml](configs/config_files/final_recon.yaml). If you want to generate the results for all scenes in the test dataset, set *vis_scan_names* to all.
 
 ## Visualization
 We use open3d for visualization. See [vis_single_scene.py](vis/vis_single_scene.py) for details.
 
 ## Evaluation
 After generating the scene object meshes, we use the code in [dimr](https://github.com/ashawkey/dimr) for evaluation by comparing the predicted meshes and the GT meshes. Please downloade the GT meshes from [here](https://drive.google.com/file/d/1ArUgyoSfXuSP34Asf0HrZYbd28yPm0vQ/view?usp=sharing).
+You can also test the results of object detection and layout estimation by 
+ ```bash
+python main.py --config configs/config_files/detection.yaml --mode test
+ ```
 
 ## Training procedure
 Stage 1: train the **detection** module. 
