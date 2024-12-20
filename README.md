@@ -58,6 +58,7 @@ dataset               # Pretrained BSPNet models and features
     ```
     python data_preprocessing/generate_layout_votes_and_anchors.py
     ```
+8. The pretrained BSPNet models and shape features can be downloaded from [here](https://drive.google.com/drive/folders/1LQ4Og0jClbx7mXDm6H_hIIUaN2Wc-Xx5?usp=drive_link)
 
 
 ## Demo
