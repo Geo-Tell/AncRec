@@ -1,0 +1,89 @@
+## prepare for refine
+method: anchorrec
+resume: False
+finetune: True
+weight: 'ckpts/model_best.pth'
+seed: 10
+multiple_gpus: False
+use_rgb: False #True
+device:
+  use_gpu: True
+  gpu_ids: '1'
+  num_workers: 1
+data:
+  dataset: scannet
+  split_name: train #val/test
+  split: quad_joint #original
+  num_point: 80000
+  num_target: 256
+  num_quad_proposal: 256
+  vote_factor: 1
+  cluster_sampling: vote_fps
+  ap_iou_thresh: 0.25
+  no_height: False
+  use_color_detection: False
+  use_color_completion: False
+  shapenet_path: /home/dmy/indoor3D/data/datasets/ShapeNetv2_data
+#  posed_images_path: /home/dmy/data/datasets/scannet/posed_images_final
+#  posed_images_path2: /home/dmy/data/datasets/scannet/posed_images_final_instance
+  points_unpackbits: True
+  points_subsample: [1024, 1024]
+  hidden_dim: 512
+  c_dim: 512
+  z_dim: 32
+  threshold: 0.5
+  completion_limit_in_train: 10
+  use_cls_for_completion: False
+  skip_propagate: True
+
+  world_scale_range: [ .9, 1.1 ]
+  noise_traslation_std: 0.1
+  voxel_size: 0.02 #0.01 for MinkResNet
+model:
+  backbone:
+    method: Pointnet2Backbone
+  detection:
+    method: ProposalModule
+    num_proposal: 256
+    cluster_sampling: vote_fps
+    num_sample: 16
+    shape:
+      residual: true
+      scale: 1.0
+      subnetworks: 1
+      supervise: True #False #true
+      wd0: 1.0
+      wd1: 1.0
+      wd2: 1.0
+  quad_detection:
+    iou_threshold: 0.05
+    method: QuadProposalModule
+    num_sample: 32
+    sa: true # use self=attention layers
+    shape:
+      subnetworks: 3
+      scale: 1.0
+      residual: True
+      supervise: True #False #True
+      wd0: 1.0
+      wd1: 1.0
+      wd2: 1.0
+    loss: QuadDetectionLoss
+test:
+  phase:  'detection'
+  batch_size: 1
+  use_cls_nms: True
+  use_3d_nms: True
+  ap_iou_thresholds: [0.5]
+  remove_under_floor: False
+  faster_eval: True
+  nms_iou: 0.25
+  use_old_type_nms: False
+  per_class_proposal: True
+  conf_thresh: 0.05
+  quad_conf_thresh: 0.05
+log:
+  path: out/prepare_data_for_recon
+  print_step: 10
+  vis_path: vis
+  debug_path: test_show

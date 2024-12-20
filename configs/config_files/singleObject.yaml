@@ -1,0 +1,100 @@
+method: anchorrec_single_reconstruct
+resume: False
+#finetune: False #True #True #False #
+#weight: []
+finetune: False #
+#weight: out/recon/model_min_loss.pth
+bsp_weight: './datasets/BSP_AE.model64.pth' ##原始BSPNet(3DCNN)权重
+seed: 10
+
+multiple_gpus: False
+device:
+  use_gpu: True
+  gpu_ids: '0'
+  num_workers: 1
+data:
+  dataset: SingleObject #scannet
+  num_target: 64
+  input_path: 'out/prepare_data_for_recon' #'out/detection_w_rgb/no_rgb/prepare_data' #  #'out/prepare_data/train_data/102_median'
+  pretrained_features_pth: 'datasets/latentz.pkl'
+  shapenet_path: /home/dmy/data/datasets/ShapeNetv2_data
+  output_gt_z_mesh: False #True
+  point_recall_thresh: 0.2
+  point_precision_thresh: 0.2
+  objectness_thresh: 0.05
+  mincount: 40
+  maxcount: 250 #500
+  conf_thresh: 0.5 # 0.5
+model:
+  feature_encode:
+    method: ResnetPointnet #2 #ResnetPointnet2
+    c_dim: 256
+    hidden_dim: 512
+    proposal_feature_dim: 512
+    use_proposal_features: True
+    use_rgb_features: True #False #True #False
+    rgb_feature_dim: 256
+    loss: FeatureEncodeLoss
+  completion:
+    method: BSPNet
+    mode: generate #retrieval
+    phase: 1
+    feature_matching: True
+    finetune_decoder: False
+    weight: 1
+    sample_vox_size: 16
+    loss: null
+optimizer:
+  method: Adam
+  lr: 1e-3  #5e-5 #5e-4,
+  betas: [0.5, 0.999]
+  eps: 1e-08
+  weight_decay: 0
+  grad_norm_clip: 10
+scheduler:
+  patience: 10 #20
+  factor: 0.1
+  threshold: 0.01
+train:
+  epochs: 10
+  freeze: []
+  batch_size: 32 #32 #16 #64 #8 #8
+val:
+  batch_size: 128 #32 #32 #64 #8 #8
+test:
+  test_phase: completion
+  phase: completion
+  batch_size: 1 #32
+  use_cls_nms: True
+  use_3d_nms: True
+  ap_iou_thresholds: [0.5]
+  faster_eval: False
+  nms_iou: 0.25
+  use_old_type_nms: False
+  per_class_proposal: True
+  conf_thresh: 0.5
+  quad_conf_thresh: 0.05
+  remove_under_floor: True
+  evaluate_mesh_mAP: True
+demo:
+  phase: 'completion'
+generation:
+  generate_mesh: False
+  resolution_0: 32
+  upsampling_steps: 0
+  use_sampling: False
+  refinement_step: 0
+  simplify_nfaces: Null
+  dump_threshold: 0.5
+  dump_results: False
+  dump_step: 100
+log:
+  vis_path: visualization
+  save_results:  False
+  vis_step_val: 30
+  vis_step_train: 30
+  vis_step_epoch: 5
+  vis_start_epoch: 20
+  print_step: 10
+  path: out/recon
+
