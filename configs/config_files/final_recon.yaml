@@ -2,7 +2,6 @@ method: anchorrec
 resume: False
 finetune: True
 weight: ['ckpts/model_recon.pth','ckpts/model_detection.pth']
-#weight: ['out/recon/1/model_min_loss.pth','ckpts/model_best.pth']
 bsp_weight: './datasets/BSP_AE.model64.pth'
 use_rgb: False
 seed: 10
