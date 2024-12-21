@@ -1,16 +1,8 @@
 method: anchorrec_single_reconstruct
 resume: False
-#finetune: False #True #True #False #
-#weight: []
-finetune: True #False #True #False #
-weight: out/recon/model_min_loss.pth
-#weight: 'out/only_detection/refine/2/recon/1/model_min_loss.pth'
-#weight: 'out/only_detection/refine/2/recon/data_aug/model_min_loss.pth'
-#weight: 'out/only_detection/refine/2/recon/PCT_small/1/model_min_loss.pth'
-#weight: 'out/only_detection/refine/2/recon/data_aug/PCT_small/1/model_min_loss.pth'
-#weight: 'out/only_detection/refine/2/recon/late_fusion/1/model_min_loss.pth'
-#weight: 'out/only_detection/refine/2/recon/data_aug/late_fusion/1/model_min_loss.pth'
-bsp_weight: './datasets/BSP_AE.model64.pth' ##原始BSPNet(3DCNN)权重
+finetune: False
+weight: []
+bsp_weight: './datasets/BSP_AE.model64.pth'
 seed: 10
 
 multiple_gpus: False
@@ -19,21 +11,18 @@ device:
   gpu_ids: '0'
   num_workers: 1
 data:
-  dataset: SingleObject #scannet
-  split: /home/dmy/data/datasets/scannet/splits/fullscan/original #
+  dataset: SingleObject
+  split: /home/dmy/data/datasets/scannet/splits/fullscan/quad_joint
   num_target: 64
-  input_path: 'out/prepare_data_for_refine/original' #'out/detection_w_rgb/no_rgb/prepare_data' #  #'out/prepare_data/train_data/102_median'
-  rgb_path: 'out/refine/for_recon'
-#  posed_images_path: /home/dmy/data/datasets/scannet/posed_images_final #partial
+  input_path: 'out/prepare_data_for_refine/original' #The path to the output object-wise data from training Stage 3
+  rgb_path: 'out/refine/for_recon'                   #The path to the output rgb features from training Stage 5
   pretrained_features_pth: 'datasets/latentz.pkl'
-#  pretrained_features_pth: 'bsp_data/DGCNN_new_dataset/all_vox256_img_z.hdf5'
-  shapenet_path: /home/dmy/data/datasets/ShapeNetv2_data
-  output_gt_z_mesh: False #True
+  output_gt_z_mesh: False 
   point_recall_thresh: 0.2
   point_precision_thresh: 0.2
   objectness_thresh: 0.05
-  use_rgb: True #False #True #False
-  resample: False #True #True
+  use_rgb: True 
+  resample: False
   add_from_gts: True
   num_from_gts: 40
   mincount: 40
@@ -42,26 +31,17 @@ data:
   output_images: True
 model:
   feature_encode:
-#    method: PCTransformer_small
-#    use_proposal_features: True
-#    use_rgb_features: True
-#    embed_dim: 384
-#    depth: 2
-#    num_heads: 3
-#    mlp_ratio: 2
-#    output_cdim: 256  #must be 256
-#    loss: FeatureEncodeLoss
-    method: ResnetPointnet #2 #ResnetPointnet2
+    method: ResnetPointnet
     c_dim: 256
     hidden_dim: 512
     proposal_feature_dim: 256
     use_proposal_features: True
-    use_rgb_features: True #False #True #False
+    use_rgb_features: True
     rgb_feature_dim: 256
     loss: FeatureEncodeLoss
   completion:
     method: BSPNet
-    mode: generate #retrieval
+    mode: generate
     phase: 1
     feature_matching: True
     finetune_decoder: False
@@ -70,22 +50,19 @@ model:
     loss: null
 optimizer:
   method: Adam
-  lr: 1e-3  #5e-5 #5e-4,
+  lr: 1e-3
   betas: [0.5, 0.999]
   eps: 1e-08
   weight_decay: 0
   grad_norm_clip: 10
 scheduler:
    method: ExponentialLR
-#  patience: 10 #20
-#  factor: 0.1
-#  threshold: 0.01
 train:
   epochs: 10
   freeze: []
-  batch_size: 32 #32 #16 #64 #8 #8
+  batch_size: 32
 val:
-  batch_size: 128 #32 #32 #64 #8 #8
+  batch_size: 128
 test:
   test_phase: completion
   phase: completion
@@ -121,27 +98,7 @@ log:
   vis_step_epoch: 5
   vis_start_epoch: 10
   print_step: 10
-#  path: out/only_detection/refine/2/recon/late_fusion/data_aug/1/test
-#  path: out/only_detection/refine/2/recon/late_fusion/1/test
-#  path: out/only_detection/refine/2/recon/PCT_small/data_aug/1/test
-#  path: out/only_detection/refine/2/recon/PCT_small/1/test
-#  path: out/only_detection/refine/2/recon/data_aug/test
   path: out/recon
-#  path: out/only_detection/refine/2/recon/images
-
   vis_gt: False
   vis_img: True
-#  vis_scan_names: "scene0342_00"
-#  vis_scan_names: [ "scene0050_01","scene0342_00","scene0355_01","scene0378_02","scene0494_00",
-#                      "scene0549_01","scene0578_00","scene0608_00","scene0616_01","scene0690_00" ]
 
-#  path: out/only_detection/refine/2/recon/PCT_small #data_aug/late_fusion
-#  path: out/align
-#  path: out/align/3/test
-#  path: out/align/4/test
-#  path: out/align/wrgb/test
-#  vis_scan_names: [ "scene0050_01","scene0342_00","scene0355_01","scene0378_02","scene0494_00",
-#                    "scene0549_01","scene0578_00","scene0608_00","scene0616_01","scene0690_00" ]
-#  /2/test #_label_thresh0.3 #/crop_first
-#  path: out/align/2/test #_label_thresh0.3 #/crop_first
-#  path: out/align #_label_thresh0.3 #/crop_first
