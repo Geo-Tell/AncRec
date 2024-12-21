@@ -1,0 +1,62 @@
+method: anchorrec_detection_refine
+resume: False #
+finetune: True
+weight: 'out/refine/model_best.pth'
+seed: 10
+multiple_gpus: False
+use_rgb: True
+device:
+  use_gpu: True
+  gpu_ids: '1'
+  num_workers: 1
+data:
+  dataset: SingleObject #scannet
+  split_name: val
+  num_target: 64
+  input_path: 'out/prepare_data_for_refine/original'
+  posed_images_path: /home/dmy/data/datasets/scannet/posed_images_final #partial
+  min_pts2d_range: 20
+  min_pts2d_number: 20
+  positive_iou_thresh: 0.1
+  min_objectness: 0.05
+  # for reconstruction
+  pretrained_features_pth: 'datasets/latentz.pkl'
+  shapenet_path: /home/dmy/data/datasetds/ShapeNetv2_data
+  image_size: 256
+  output_gt_z_mesh: True
+  use_rgb: True
+  point_recall_thresh: 0.2
+  point_precision_thresh: 0.2
+  num_proposal: 256 #64
+model:
+  img_encoder:
+    method: ResNet_fpn
+    frozen_stages: 2
+    use_point_mask: False
+    out_channels: 256
+  detection_refine_head:
+    method: FusionPredictHead
+    rgb_input_channels: 256
+    hidden_dim: 128
+test:
+  batch_size: 1
+  phase: detection
+  use_cls_nms: True
+  use_3d_nms: True
+  ap_iou_thresholds: [ 0.5,0.25 ]
+  faster_eval: True #False not remove empty bbox
+  nms_iou: 0.25
+  use_old_type_nms: False
+  per_class_proposal: True
+  conf_thresh: 0.8 #5 #05
+  quad_conf_thresh: 0.05
+  remove_under_floor: True
+  evaluate_mesh_mAP: True
+log:
+  vis_path: visualization
+  save_results: True #False
+  vis_step_val: 1 #30
+  vis_step_train: 1 #150
+  vis_step_epoch: 1 #50
+  print_step: 10
+  path: out/refine/test

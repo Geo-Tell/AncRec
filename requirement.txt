@@ -1,0 +1,15 @@
+torch
+tensorboard
+scikit-image==0.17.2
+scipy==1.5.4
+scikit-learn
+PyYAML
+trimesh
+timm
+matplotlib
+h5py
+plyfile
+opencv-python
+
+cd external/pointnet2_ops_lib
+pip install .

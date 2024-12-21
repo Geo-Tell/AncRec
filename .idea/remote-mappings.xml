@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteMappingsManager">
+    <list>
+      <list>
+        <remote-mappings server-id="python@sftp://lht@192.168.210.159:22/home/lht/anaconda3/envs/py3-mink/bin/python" />
+      </list>
+    </list>
+  </component>
+</project>

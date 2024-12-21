@@ -1,0 +1,9 @@
+===== ./outputs/ours =====
+----- thresh = 0.047 -----
+mAP_mesh                                          : nan
+mean Precision_mesh                               : nan
+mean Recall_mesh                                  : nan
+----- thresh = 0.1 -----
+mAP_mesh                                          : nan
+mean Precision_mesh                               : nan
+mean Recall_mesh                                  : nan

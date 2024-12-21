@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="29702b23-37be-4097-8320-c28786eac0c8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../train_epoch_reconstruction.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extract_posed_images.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../configs/config_files/ISCNet_detection.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../configs/config_files/ISCNet_detection.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../configs/config_files/prepare_data.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../configs/config_files/prepare_data.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../configs/scannet_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../configs/scannet_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libkdtree/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libkdtree/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libkdtree/MANIFEST.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libkdtree/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libkdtree/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libkdtree/README.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libkdtree/appveyor.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libkdtree/appveyor/install.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libkdtree/appveyor/missing-headers.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libkdtree/appveyor/run_with_compiler.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libkdtree/pykdtree/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libkdtree/pykdtree/_kdtree_core.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libkdtree/pykdtree/_kdtree_core.c.mako" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libkdtree/pykdtree/kdtree.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libkdtree/pykdtree/kdtree.cpython-36m-x86_64-linux-gnu.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libkdtree/pykdtree/kdtree.cpython-38-x86_64-linux-gnu.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libkdtree/pykdtree/kdtree.pyx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libkdtree/pykdtree/render_template.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libkdtree/pykdtree/test_tree.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libkdtree/scripts/build-manylinux-wheels.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libkdtree/setup.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libkdtree/setup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libmesh/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libmesh/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libmesh/inside_mesh.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libmesh/triangle_hash.cpython-36m-x86_64-linux-gnu.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libmesh/triangle_hash.cpython-38-x86_64-linux-gnu.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libmesh/triangle_hash.pyx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libmise/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libmise/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libmise/mise.cpython-36m-x86_64-linux-gnu.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libmise/mise.cpython-38-x86_64-linux-gnu.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libmise/mise.pyx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libmise/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/librender/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/librender/offscreen.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/librender/offscreen.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/librender/pyrender.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/librender/pyrender.cpython-36m-x86_64-linux-gnu.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/librender/pyrender.pyx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/librender/setup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/librender/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libsimplify/Simplify.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libsimplify/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libsimplify/simplify_mesh.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libsimplify/simplify_mesh.cpython-36m-x86_64-linux-gnu.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libsimplify/simplify_mesh.cpython-38-x86_64-linux-gnu.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libsimplify/simplify_mesh.pyx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libsimplify/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libvoxelize/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libvoxelize/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libvoxelize/tribox2.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libvoxelize/voxelize.cpython-36m-x86_64-linux-gnu.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libvoxelize/voxelize.cpython-38-x86_64-linux-gnu.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/libvoxelize/voxelize.pyx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/MANIFEST.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/README.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/compile.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/Bitmap.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/Bitmap.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/Circularity.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/Circularity.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/ColorDescriptor.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/ColorDescriptor.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/CompactColor.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/Eccentricity.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/Eccentricity.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/FourierDescriptor.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/FourierDescriptor.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/Main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/Morphology.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/Morphology.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/RWObj.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/RWObj.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/RecovAffine.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/RecovAffine.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/Refine.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/Refine.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/RegionShape.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/RegionShape.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/Rotate.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/Rotate.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/Thin.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/Thin.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/TraceContour.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/TraceContour.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/TranslateScale.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/TranslateScale.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/TypeConverts.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/convert.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/convert.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/ds.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/edge.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/edge.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/config.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/config.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/executor.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/f77_func.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fcr_1.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fcr_10.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fcr_11.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fcr_12.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fcr_128.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fcr_13.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fcr_14.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fcr_15.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fcr_16.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fcr_2.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fcr_3.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fcr_32.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fcr_4.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fcr_5.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fcr_6.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fcr_64.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fcr_7.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fcr_8.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fcr_9.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fftw-int.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fftw.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fftwf77.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fftwnd.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fhb_10.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fhb_16.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fhb_2.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fhb_3.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fhb_32.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fhb_4.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fhb_5.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fhb_6.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fhb_7.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fhb_8.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fhb_9.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fhf_10.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fhf_16.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fhf_2.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fhf_3.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fhf_32.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fhf_4.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fhf_5.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fhf_6.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fhf_7.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fhf_8.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fhf_9.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fn_1.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fn_10.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fn_11.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fn_12.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fn_13.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fn_14.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fn_15.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fn_16.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fn_2.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fn_3.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fn_32.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fn_4.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fn_5.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fn_6.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fn_64.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fn_7.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fn_8.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fn_9.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fni_1.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fni_10.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fni_11.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fni_12.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fni_13.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fni_14.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fni_15.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fni_16.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fni_2.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fni_3.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fni_32.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fni_4.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fni_5.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fni_6.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fni_64.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fni_7.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fni_8.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/fni_9.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/frc_1.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/frc_10.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/frc_11.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/frc_12.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/frc_128.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/frc_13.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/frc_14.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/frc_15.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/frc_16.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/frc_2.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/frc_3.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/frc_32.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/frc_4.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/frc_5.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/frc_6.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/frc_64.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/frc_7.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/frc_8.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/frc_9.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/ftw_10.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/ftw_16.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/ftw_2.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/ftw_3.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/ftw_32.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/ftw_4.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/ftw_5.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/ftw_6.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/ftw_64.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/ftw_7.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/ftw_8.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/ftw_9.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/ftwi_10.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/ftwi_16.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/ftwi_2.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/ftwi_3.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/ftwi_32.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/ftwi_4.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/ftwi_5.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/ftwi_6.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/ftwi_64.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/ftwi_7.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/ftwi_8.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/ftwi_9.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/generic.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/malloc.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/planner.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/putils.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/rader.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/rconfig.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/rexec.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/rexec2.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/rfftw.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/rfftwf77.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/rfftwnd.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/rgeneric.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/rplanner.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/timer.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/twiddle.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/wisdom.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/fftw/wisdomio.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/3DAlignment/glut.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/Executable/12_0.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/Executable/12_1.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/Executable/12_2.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/Executable/12_3.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/Executable/12_4.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/Executable/12_5.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/Executable/12_6.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/Executable/12_7.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/Executable/12_8.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/Executable/12_9.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/Executable/3DAlignment" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/Executable/Distance" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/Executable/align10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/Executable/q8_table" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/Executable/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/LightField/Main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/LightField/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/LightField/ds.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/examples/3dcafe_a-10.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/examples/airplane.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/examples/cup1.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/examples/cup2.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/lfd/lfd.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/light-field-distance/setup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/pointnet2_ops_lib/pointnet2_ops/pointnet2_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../external/pointnet2_ops_lib/pointnet2_ops/pointnet2_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/pyTorchChamferDistance/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/pyTorchChamferDistance/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/pyTorchChamferDistance/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/pyTorchChamferDistance/chamfer_distance/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/pyTorchChamferDistance/chamfer_distance/chamfer_distance.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/pyTorchChamferDistance/chamfer_distance/chamfer_distance.cu" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/pyTorchChamferDistance/chamfer_distance/chamfer_distance.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/pyfusion/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/pyfusion/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/pyfusion/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/pyfusion/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/pyfusion/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/pyfusion/cyfusion.cpython-36m-x86_64-linux-gnu.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/pyfusion/cyfusion.pyx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/pyfusion/fusion.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/pyfusion/fusion.cu" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/pyfusion/fusion.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/pyfusion/fusion_zach_tvl1.cu" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/pyfusion/gpu_common.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/pyfusion/setup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/pyrender/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/pyrender/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/pyrender/offscreen.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/pyrender/offscreen.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/pyrender/pyrender.pyx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../external/pyrender/setup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../iteration.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../prepare_data_for_reconstruction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../models/datasets.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../models/datasets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../models/iscnet/SingleObjectDatasetWithRGB.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../models/iscnet/SingleObjectDatasetWithRGB.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../models/iscnet/dataloader.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../models/iscnet/dataloader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../models/iscnet/modules/layers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../models/iscnet/modules/layers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../models/iscnet/modules/network.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../models/iscnet/modules/network.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../models/iscnet/modules/network_small.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../models/iscnet/modules/network_small.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../models/iscnet/modules/proposal_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../models/iscnet/modules/proposal_module.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../models/iscnet/modules/quad_proposal_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../models/iscnet/modules/quad_proposal_module.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../models/iscnet/modules/skip_propagation.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../models/iscnet/modules/skip_propagation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sphere.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../spheres/sphere.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sphere102.npy" beforeDir="false" afterPath="$PROJECT_DIR$/../../spheres/sphere102.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sphere18.npy" beforeDir="false" afterPath="$PROJECT_DIR$/../../spheres/sphere18.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sphere38.npy" beforeDir="false" afterPath="$PROJECT_DIR$/../../spheres/sphere38.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sphere66.npy" beforeDir="false" afterPath="$PROJECT_DIR$/../../spheres/sphere66.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../sphere902.npy" beforeDir="false" afterPath="$PROJECT_DIR$/../../spheres/sphere902.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../test_epoch.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../test_epoch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../train.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../train_epoch.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../train_epoch_detection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../train_epoch2.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2T01ovfqQmcDCLBBVtuT4XJkrP6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../others/segment-anything-main" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="29702b23-37be-4097-8320-c28786eac0c8" name="Default Changelist" comment="" />
+      <created>1690165362699</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690165362699</updated>
+      <workItem from="1690165363868" duration="15000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

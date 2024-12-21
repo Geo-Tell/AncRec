@@ -1,0 +1,129 @@
+method: anchorrec_single_reconstruct
+resume: False
+finetune: True #False #True
+#weight: []
+#weight: out/align/1/model_min_loss.pth
+#weight: out/align_late_fusion/1/model_min_loss.pth
+#weight: out/align_pct/1/model_min_loss.pth
+#weight: out/align_no_feat/2/model_min_loss.pth
+#weight: out/align_no_feat/2/model_min_loss.pth
+#weight: out/align_no_feat/2/model_min_loss.pth
+weight: out/align_no_feat/2/model_8.pth
+bsp_weight: './datasets/BSP_AE.model64.pth' ##原始BSPNet(3DCNN)权重
+seed: 10
+multiple_gpus: False
+device:
+  use_gpu: True
+  gpu_ids: '5'
+  num_workers: 1
+data:
+  dataset: SingleObject #scannet
+  split: /home/dmy/data/datasets/scannet/splits/fullscan/original #
+  num_target: 64
+  input_path: '/home/lht/dmy/CLEAN2/out/only_detection/prepare_data' #'out/detection_w_rgb/no_rgb/prepare_data' #
+  pretrained_features_pth: 'datasets/latentz.pkl'
+  shapenet_path: /home/dmy/data/datasets/ShapeNetv2_data
+  output_gt_z_mesh: False #True
+  point_recall_thresh: 0.2
+  point_precision_thresh: 0.2
+  objectness_thresh: 0.05
+  use_rgb: False
+  resample: False #rue
+  add_from_gts: False #True
+  num_from_gts: 40
+  mincount: 40
+  maxcount: 250 #500
+  conf_thresh: 0.5 # 0.5
+model:
+  feature_encode:
+#    method: ResnetPointnet #2
+#    c_dim: 256
+#    hidden_dim: 512
+#    proposal_feature_dim: 256
+#    use_proposal_features: True
+#    use_rgb_features: False
+#    rgb_feature_dim: 256
+#    loss: FeatureEncodeLoss
+    method: PCTransformer_small
+    use_proposal_features: False #True
+    use_rgb_features: False
+    embed_dim: 384
+    depth: 2
+    num_heads: 3
+    mlp_ratio: 2
+    output_cdim: 256  #must be 256
+    loss: FeatureEncodeLoss
+  completion:
+    method: BSPNet
+    mode: generate #retrieval
+    phase: 1
+    feature_matching: True
+    finetune_decoder: False
+    weight: 1
+    sample_vox_size: 16
+    loss: null
+optimizer:
+  method: Adam
+  lr: 1e-3  #5e-5 #5e-4,
+  betas: [0.5, 0.999]
+  eps: 1e-08
+  weight_decay: 0
+  grad_norm_clip: 10
+scheduler:
+  patience: 10 #20
+  factor: 0.1
+  threshold: 0.01
+train:
+  epochs:  10
+  freeze: []
+  batch_size: 32 #32 #16 #64 #8 #8
+val:
+  batch_size: 128 #32 #32 #64 #8 #8
+test:
+  test_phase: completion
+  phase: completion
+  batch_size: 1 #32
+  use_cls_nms: True
+  use_3d_nms: True
+  ap_iou_thresholds: [0.5]
+  faster_eval: False
+  nms_iou: 0.25
+  use_old_type_nms: False
+  per_class_proposal: True
+  conf_thresh: 0.5
+  quad_conf_thresh: 0.05
+  remove_under_floor: True
+  evaluate_mesh_mAP: True
+demo:
+  phase: 'completion'
+generation:
+  generate_mesh: False
+  resolution_0: 32
+  upsampling_steps: 0
+  use_sampling: False
+  refinement_step: 0
+  simplify_nfaces: Null
+  dump_threshold: 0.5
+  dump_results: False
+  dump_step: 100
+log:
+  vis_path: visualization
+  save_results:  True #False #True #
+  vis_step_val: 30
+  vis_step_train: 30
+  vis_step_epoch: 5
+  vis_start_epoch: 10
+  print_step: 10
+  path: out/align_no_feat/2 #_late_fusion
+#  path: out/align/1/test #_late_fusion
+  vis_scan_names: ["scene0378_02"]
+#  path: out/align_pct/1/test #_late_fusion
+#  path: out/align_late_fusion/1/test #_late_fusion
+#  path: out/align/3/test
+#  path: out/align/4/test
+#  path: out/align/wrgb/test
+#  vis_scan_names: [ "scene0050_01","scene0342_00","scene0355_01","scene0378_02","scene0494_00",
+#                    "scene0549_01","scene0578_00","scene0608_00","scene0616_01","scene0690_00" ]
+#  /2/test #_label_thresh0.3 #/crop_first
+#  path: out/align/2/test #_label_thresh0.3 #/crop_first
+#  path: out/align #_label_thresh0.3 #/crop_first

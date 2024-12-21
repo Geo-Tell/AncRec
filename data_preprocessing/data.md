@@ -1,0 +1,7 @@
+
+python sample_mesh_and_resize.py
+python make_shape_anchor_labels.py
+python update_bbox_labels.py
+
+python extract_images_and_point_correspondences.py
+python make_gt_instance_images.py
