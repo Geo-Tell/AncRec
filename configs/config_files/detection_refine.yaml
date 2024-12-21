@@ -1,5 +1,5 @@
 method: anchorrec_detection_refine
-resume: False #True
+resume: False
 finetune: True
 weight: 'out/rgb_pretrain/model_last.pth'
 seed: 10
@@ -52,14 +52,11 @@ optimizer:
   grad_norm_clip: 10
 scheduler:
   method: ExponentialLR
-#  patience: 10 #20
-#  factor: 0.1
-#  threshold: 0.01
 train:
   epochs: 15
 #  freeze: []
   freeze: ['img_encoder']
-  batch_size: 128 #2 #128 #相对于64 #128 #
+  batch_size: 128
   eval_map_start_epoch: 0
 val:
   batch_size: 1
@@ -67,7 +64,7 @@ val:
   use_cls_nms: True
   use_3d_nms: True
   ap_iou_thresholds: [ 0.5,0.25 ]
-  faster_eval: True #False not remove empty bbox
+  faster_eval: True #False: not removing empty bbox
   nms_iou: 0.25
   use_old_type_nms: False
   per_class_proposal: True
@@ -84,12 +81,4 @@ log:
   vis_step_train: 150
   vis_step_epoch: 50
   print_step: 10
-  path: out/refine #/no_freeze
-#  path: out/only_detection/refine #/no_freeze
-#  path: out/rgb_pretrain/2_resnet34_with_val/refine/2
-#  path: out/rgb_pretrain/2/refine
-#  path: out/rgb_pretrain/no_fpn/baseline
-#  path: out/rgb_pretrain/no_fpn/start_refine/average_parameters/1
-#  path: out/rgb_pretrain/no_fpn/start_refine/use_recall_for_objectness/1
-#  path: out/rgb_pretrain/no_fpn/start_refine/soft_cls_label/1
-#  path: out/rgb_pretrain/no_fpn/start_refine/only_semantic_loss
+  path: out/refine 
